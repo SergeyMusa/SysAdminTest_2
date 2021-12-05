@@ -1,0 +1,19 @@
+/* скрытие элементов до выбора чекбокса */
+/* .hidden-div {
+    display: none;
+  }
+
+  input[name="email-value"] {
+    display: none;
+  }
+  
+  input[name="email-enabled"]:checked~input[name="email-value"] {
+    display: inline-block;
+  } */
+/* скрытие элементов до выбора чекбокса */
+
+.test2 {
+/* background-color: red; */
+width: auto;
+
+}

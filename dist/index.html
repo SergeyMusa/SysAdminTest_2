@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.min.css">
+</head>
+
+<header>
+    <!-- верхнее меню -->
+    <nav class="navbar navbar-light" style="background-color: #e3fde9">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/daemon.jpg"
+            alt=""
+            width="35"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+          SysAdminTest
+        </a>
+
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- авторизация для доступа к тестам -->
+    <!-- <div class="form-check" ">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        авториздоваться
+</label>
+</div> -->
+
+    <p>
+      Требуется авторизоваться, чтобы пройти тесты; ваши данные нужны только для
+      статистики и никуда не будут переданы ).
+    </p>
+    <!-- <p> Рекомендую использовать случайные сочетания клавиш, вы же как истинный шпион должны всегда скрываете себя )</p> -->
+
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="flexSwitchCheckDefault"
+      />
+      <label class="form-check-label" for="flexSwitchCheckDefault"
+        >авторизоваться, чтобы пройти тесты
+        <!-- <input type="checkbox" id="shest001"> -->
+        <script>
+          var c = document.querySelector("#flexSwitchCheckDefault");
+          c.onclick = function () {
+            // alert( 'чекбокс выключён1' );
+            userOrg.disabled = true;
+            userName.disabled = true;
+            userButton.disabled = true;
+
+            if (c.checked) {
+              // alert( 'чекбокс включён' );
+              userName.disabled = false;
+              userOrg.disabled = false;
+              userButton.disabled = false;
+            }
+          };
+          // ------
+        </script>
+        <script>
+          const userFunction = () => {
+            // alert( 'чекбокс выключён1' );
+            let user = userName.placeholder;
+            let org = userOrg.placeholder;
+
+            if (userName.value !== "" || userOrg.value !== "") {
+              // userName.placeholder = "Сыкло )";
+              user = `"userName=${userName.value}"`;
+              // org = userOrg.value ;
+              org = `"userOrg=${userOrg.value}"`;
+            }
+            console.log(`userButton click ${user} ${org} `);
+            // console.log( ' userButton click ' + 'яяяяяяя' );
+            document.cookie = user;
+            org;
+            // document.cookie = org;
+            console.log(
+              `document.cookie =  ${(document.cookie =
+                user)} ${(document.cookie = org)} `
+            );
+            // alert( document.cookie );
+            // function showCookies() {
+            // const output = document.getElementById('cookies');
+            // output.textContent = '> ' + document.cookie;
+            // }
+          };
+          //  console.log( ' userButton click' );
+        </script>
+      </label>
+    </div>
+    <form action="">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Штирлиц"
+            id="userName"
+            disabled="true"
+            label="qwe"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="ООО Тайное Общество"
+            id="userOrg"
+            disabled="true"
+            required="true"
+          />
+        </div>
+        <div class="col">
+          <button
+            onclick="userFunction()"
+            type="button"
+            class="btn btn-success"
+            id="userButton"
+            disabled="true"
+          >
+            Success
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- </div> -->
+
+    <!-- ------------------------ -->
+    <!-- простой и рабочий вариант -->
+    <!-- <input type="checkbox" name="email-enabled" />
+  <input placeholder="Email" type="email" name="email-value" /> -->
+  </header>
+  <!-- Боковая панель (сайдбар) / просто не могу понять, почему не работает как в примерах -->
+  <!-- <aside> 
+    <nav> 
+        <ul>
+            <li><a href="/service-1/">Услуга 1</a></li>
+            <li><a href="/service-2/">Услуга 2</a></li>
+            <li><a href="/service-3/">Услуга 3</a></li>
+        </ul>
+    </nav>
+</aside> -->
+
+  <body>
+    <div class="container">
+      <h1 class="text-center pt-3 pb-3" id="YYY">Hello, All!</h1>
+
+      <section>
+        <p class="text-left">
+          Данный ресурс посвящается всем желающим начать работать в IT, или
+          скорее пройти собеседование.
+        </p>
+        <p>
+          Для начала будут тесты на СисАдмина, позже ;) по остальным профессиям
+        </p>
+        <h3>
+          небольшая анотация: все что вы здесь найдете не учебник, ни в коем
+          случае не пытайтесь выучить эти вопросы и устроиться на работу любой
+          ценой - это плохо кончится, синдром самозванца, эмоциональное
+          выгорание и депрессия - это не шутки.
+        </h3>
+        <p>
+          эти тесты, исключительно чтобы понять что примерно от вас требуется
+          знать и будут спрашивать, для учебы есть специализированные курсы
+        </p>
+        <p>
+          если понимаете, что многого не знаете, идите на работу "попроще",
+          учитесь и готовтесь, и да прибудет с вами сила )
+        </p>
+        <p>
+          <strike>Как в бородатом анекдоте:</strike>
+          <details>
+            <summary>
+              <style>
+                details summary {
+                  list-style-type: "[...]"; /* такие слова, как «Ещё», «Читать дальше», «Нажать» лучше вносить в list-style-type, чтобы они не были видны в браузерах, не поддерживающих тег details (в Google Chrome отсутствует реализация на момент написания статьи) */
+                  color: rgb(64, 64, 102);
+                  cursor: pointer;
+                }
+                details[open] summary {
+                  display: none;
+                }
+              </style>
+            </summary>
+            <hr />
+            <blockquote>
+              <pre>
+                    Женщины делятся на три категории: девушек, дам, бабушек. 
+                    Причем девушки еще на две: девушек и не девушек. 
+                    Дамы, в свою очередь, на три: дам, не дам и дам — но не вам. 
+                    А бабушки не делятся. Они разлагаются.
+                </pre
+              >
+            </blockquote>
+            <hr />
+          </details>
+        </p>
+
+        <p>так и админы, если очень грубо, делятся на:</p>
+      </section>
+
+      <section>
+        <!-- <div class="row"> -->
+        <!-- <div class="col-xs-6 col-md-3"> -->
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h3>хелпдеск</h3>
+              <img
+                src="images/admin1.jpg"
+                class="card-img-top"
+                alt="pict_helpdesk"
+              />
+              <div class="caption">
+                <p>Длинная дорога юнный падаван, ждет тебя</p>
+                <a
+                  href="requestHelpdesk.html"
+                  class="btn btn-default"
+                  role="button"
+                  >Требования</a
+                >
+
+                <!-- модальное окно -->
+                <!-- /Модальное окно -->
+
+                <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h3>админ</h3>
+              <img
+                src="images/admin2.jpg"
+                class="card-img-top"
+                alt="pict_admin"
+              />
+              <div class="caption">
+                <p>
+                  Собственно говоря, по большей части, именно для тебя тут все и
+                  написано..
+                </p>
+                <p>
+                  <a href="testAdmin.html" class="btn btn-primary" role="button"
+                    >Тесты на Админа</a
+                  >
+                  <a href="helpAdmin.html" class="btn btn-primary" role="button"
+                    >Сбеседование</a
+                  >
+                  <a
+                    href="requestAdmin.html"
+                    class="btn btn-default"
+                    role="button"
+                    >Требования</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h3>Guru</h3>
+              <img
+                src="images/admin3.jpeg"
+                class="card-img-top"
+                alt="pict_guru"
+              />
+              <div class="caption">
+                <p>
+                  Если ты считаешь себя достойным этого уровня, ты уже должен
+                  видеть свой путь
+                </p>
+                <p>
+                  <a
+                    href="requestGuru.html"
+                    class="btn btn-default"
+                    role="button"
+                    >Требования</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h3>iq</h3>
+              <img src="images/iq.png" class="card-img-top" alt="pict_iq" />
+              <div class="caption">
+                <p>тест на общее развитие и сообразительность</p>
+                <p>
+                  <a href="iq.html" class="btn btn-primary" role="button"
+                    >TEST</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- переход на страницу тестов    -->
+      <hr />
+      <a href="testAdmin.html" class="href">ТЕСТЫ</a>
+      <hr />
+
+      <!-- загрузка тестов из базы или джейсон           -->
+      <script runat="server"></script>
+    </div>
+  </body>
+
+
+    <div class="page-wrapper" id="pageWrapper">
+        <header>Header</header>
+
+        
+    <h1>Content</h1>
+
+
+          <footer class="page-footer font-small blue" style="width: 100%">
+    <section class="footer-copyright text-center py-3">
+      <br />
+      <p>_</p>
+      <p>добавить оценку теста +-</p>
+      <p>средний результат</p>
+      <p>печать результата или отправить на почту</p>
+      <p>сделать своою выборку тестов</p>
+      <p>форма отзывов: ошибки или предложения</p>
+      <p>
+        id теста, показывает количество вызовов за день(чтобы не откатывали
+        назад - не жульничали)
+      </p>
+      <p>таймер</p>
+    </section>
+    <!-- Copyright -->
+    <hr />
+    <div class="footer-copyright text-center py-3">© 2021 Copyright</div>
+    <!-- Copyright -->
+  </footer>
+    </div>
+
+
+    <script src="assets/js/app.min.js"></script>
+</html>
