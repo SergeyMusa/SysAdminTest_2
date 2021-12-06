@@ -15,7 +15,34 @@
     <link rel="stylesheet" href="../../assets/css/app.min.css" />
   </head>
   <div class="page-wrapper" id="pageWrapper">
-    {% include "components/header.html" %}
+    <header>
+
+    <!-- верхнее меню -->
+    <nav class="navbar navbar-light" style="background-color: #e3fde9">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/img/daemon.jpg"
+              alt=""
+              width="35"
+              height="30"
+              class="d-inline-block align-text-top"
+            />
+            SysAdminTest
+          </a>
+  
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</header>
   </dev>
   <body>
   
@@ -187,7 +214,27 @@
     </script>
   </body>
   <div class="page-wrapper" id="pageWrapper">
-    {% include "components/footer.html" %}
+      <footer class="page-footer font-small blue" style="width: 100%">
+    <section class="footer-copyright text-center py-3">
+      <hr />
+      <p>добавить оценку теста +-</p>
+      <p>средний результат</p>
+      <p>печать результата или отправить на почту</p>
+      <p>сделать своою выборку тестов</p>
+      <p>форма отзывов: ошибки или предложения</p>
+      <p>
+        id теста, показывает количество вызовов за день(чтобы не откатывали
+        назад - не жульничали)
+      </p>
+      <p>таймер</p>
+    </section>
+    <!-- Copyright -->
+    <hr />
+    <div class="footer-copyright text-center py-3">© 2021 Copyright</div>
+    <!-- Copyright -->
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+  </footer>
   </div>
 
 </html>
